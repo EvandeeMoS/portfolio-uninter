@@ -32,21 +32,23 @@
             </nav>
         </header>
         <section class="content-container">
-            <h2>Send me a email</h2>
-            <section class="mail">
-                <form action="POST">
-                    <input class="mail-subject" name="subject" placeholder="Insira o assunto do email aqui..." type="text">
-                    <div class="from-container">
-                        <label class="from-label" for="email">From: </label>
-                        <input class="from-input" id="email" name="email" placeholder="Insira seu email aqui..." type="text">
-                    </div>
-                    <p class="mail-to">to: moisesevander@gmail.com</p>
-                    <div class="message-container">
-                        <label class="message-label" for="message">Mensagem</label>
-                        <textarea class="message-textarea" name="message" placeholder="Insira o corpo do seu email aqui" type="text"></textarea>
-                    </div>
-                    <button class="send-mail-btn" type="submit">Enviar</button>
-                </form>
+            <section class="mail-section">
+                <h2>Send me a email</h2>
+                <section class="mail">
+                    <form action="POST">
+                        <input class="mail-subject" name="subject" placeholder="Insira o assunto do email aqui..." type="text">
+                        <div class="from-container">
+                            <label class="from-label" for="email">De: </label>
+                            <input class="from-input" id="email" name="email" placeholder="Insira seu email aqui..." type="text">
+                        </div>
+                        <p class="mail-to">Para: moisesevander@gmail.com</p>
+                        <div class="message-container">
+                            <label class="message-label" for="message">Mensagem:</label>
+                            <textarea class="message-textarea" id="message" name="message" placeholder="Insira o corpo do seu email aqui" type="text"></textarea>
+                        </div>
+                        <button title="enviar" class="send-mail-btn" type="submit">enviar</button>
+                    </form>
+                </section>
             </section>
         </section>
     </body>

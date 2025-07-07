@@ -249,8 +249,21 @@ body {
     background: #00000030;
 }
 
+.mail-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8rem;
+}
+
+.mail-section h2 {
+    margin-bottom: 4rem;
+}
+
 .mail {
-    padding: 4rem;
+    padding: 4rem 8rem;
+    align-self: center;
+    width: 100%;
+    max-width: 70%;
     box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
     background-color: var(--color-background-pic);
 }
@@ -276,10 +289,6 @@ body {
     align-items: center;
 }
 
-.from-label {
-
-}
-
 .from-input {
     flex: 1;
     padding: 2rem 1rem;
@@ -300,25 +309,40 @@ body {
 }
 
 .message-textarea {
+    height: 100rem;
+    margin-bottom: 4rem;
     border: none;
     resize: none;
-    height: 100rem;
 }
 
 .send-mail-btn {
-    width: 16rem;
-    height: 16rem;
-    border-radius: 50%;
-    border: none;
-    border-top: 1px solid #fdabab;
-    border-left: 1px solid #fdabab;
-    box-shadow: 0.5rem 0.5rem 1rem #00000052;
-    background-color: #ee3838;
-    font-weight: 800;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    background: none;
+    border-radius: 8rem;
+    box-shadow: 1rem 1rem 1rem #00000030;
+    padding: 4rem;
     color: #630707;
+    font-weight: 800;
+}
+
+.send-mail-btn:hover {
+    background-color: #630707;
+    color: var(--color-background-pic);
 }
 
 @media(max-width: 1040px) {
+    .header {
+        padding: 4rem;
+    }
+
+    .content-container {
+        margin: 0 4rem;
+    }
+
     .main-content-home {
         flex-direction: column;
     }
@@ -334,5 +358,9 @@ body {
     .pics-container .pic-108mm-88mm {
         width: 70rem;
         padding: 4rem;
+    }
+
+    .mail {
+        max-width: 90%;
     }
 }
