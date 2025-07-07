@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+:root {
+    --color-font-main: #353535;
+    --color-background-main: #FFF1E5;
+    --color-background-shadow: #dacebf;
+    --color-background-pic: #FFFCFA;
+    --color-font-highlight: #6A994E;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* iremos trabalhar no site todo com medidas baseadas em 4px, logo 0.25 * 16 = 4 */
+    font-size: 0.25rem; 
+}
+
+body {
+    background: var(--color-background-main);
+    font-size: 4rem;
+    color: var(--color-font-main);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-height: 20rem;
+    padding: 4rem 16rem;
+    position: fixed;
+    box-shadow: 0 1rem 1rem var(--color-background-shadow);
+    background: var(--color-background-main);
+}
+
+.header ul {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+}
+
+.header ul a {
+    text-decoration: none;
+    color: var(--color-font-main);
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20rem;
+    min-height: 100vh;
+    margin: 0 16rem;
+}
+
+.main-content-home {
+    display: flex;
+    flex: 1;
+    gap: 20rem;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+}
+
+.pic-46mm-62mm {
+    display: flex;
+    flex-direction: column;
+    width: 120rem;
+    padding: 6rem;
+    /* para alcançarmos a proporção desse modelo de foto */
+    aspect-ratio: 23/31;
+    background: var(--color-background-pic);
+    box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
+}
+
+.pic-46mm-62mm img {
+    background-color: #333;
+    min-width: 100%;
+    flex: 3;
+}
+
+.pic-46mm-62mm p {
+    min-height: 20rem;
+    flex: 1;
+}
+
+#pic-home-text {
+    font-size: 16rem;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-style: normal;
+    position: relative;
+    left: 5%;
+    top: 5%;
+    transform: rotate(2deg);
+}
+
+.rot-4-neg {
+    transform: rotate(356deg);
+}
+
+.text-content {
+    text-align: center;
+}
+
+.display {
+    margin-bottom: 2rem;
+}
+
+
+.display .name {
+    font-size: 8rem;
+    color: var(--color-font-highlight);
+}
+
+.main-content-about {
+    display: flex;
+    min-height: calc(100vh - 20rem);
+    align-items: center;
+    justify-content: center;
+    gap: 16rem;
+}
+
+.pics-container {
+    display: flex;
+    flex: 1;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.pivot {
+    position: relative;
+}
+
+.pic-108mm-88mm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 6rem;
+    aspect-ratio: 22 / 27;
+    box-shadow: 1rem 1rem 2rem #33333341;
+    background: var(--color-background-pic);
+}
+
+.pic-108mm-88mm img {
+    flex: 3;
+    min-width: 100%;
+    background: #333;
+}
+
+.pic-108mm-88mm p {
+    flex: 1;
+}
+
+.pics-container .pic-108mm-88mm:nth-child(1) {
+    position: absolute;
+    width: 100rem;
+    left: -40rem;
+    top: -10rem;
+    transform: translate(-50%, -50%) rotate(-25deg);
+}
+
+.pics-container .pic-108mm-88mm:nth-child(2) {
+    position: absolute;
+    top: -20rem;
+    width: 100rem;
+    left: 40rem;
+    top: 10rem;
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.text-content-about {
+    flex: 1;
+}
+
+.text-content-about h2 {
+    font-size: 6rem;
+    margin-bottom: 4rem;
+}
+
+.text-content-about p {
+    margin-bottom: 2rem;
+}
+
+.main-content-education {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-education section {
+    flex: 1;
+}
+
+.main-content-education ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content-education ul li {
+    display: flex;
+    gap: 16rem;
+    align-items: center;
+    min-height: 200rem;
+}
+
+.main-content-education ul .img-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pic-108mm-88mm-h {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem;
+    width: 70%;
+    aspect-ratio: 27 / 22;
+    box-shadow: 1rem 1rem 2rem #33333341;
+    background: var(--color-background-pic);
+}
+
+.pic-108mm-88mm-h img {
+    background: #333;
+    flex: 3;
+}
+
+.pic-108mm-88mm-h p {
+    flex: 1;
+}
+
+.text-education {
+    flex: 1;
+    text-align: center;
+}
+
+.main-content-education .section-title {
+    margin-top: 10rem;
+}
+
+.background-variation {
+    background: #00000030;
+}
