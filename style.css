@@ -51,9 +51,9 @@ body {
 .content-container {
     display: flex;
     flex-direction: column;
-    padding-top: 20rem;
     min-height: 100vh;
     margin: 0 16rem;
+    padding: 20rem 0;
 }
 
 .main-content-home {
@@ -68,8 +68,8 @@ body {
 .pic-46mm-62mm {
     display: flex;
     flex-direction: column;
-    width: 120rem;
-    padding: 6rem;
+    width: 100%;
+    padding: 5%;
     /* para alcançarmos a proporção desse modelo de foto */
     aspect-ratio: 23/31;
     background: var(--color-background-pic);
@@ -78,13 +78,17 @@ body {
 
 .pic-46mm-62mm img {
     background-color: #333;
-    min-width: 100%;
+    width: 100%;
     flex: 3;
 }
 
 .pic-46mm-62mm p {
-    min-height: 20rem;
     flex: 1;
+    width: 100%;
+    display: inline-block;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
 }
 
 #pic-home-text {
@@ -118,13 +122,12 @@ body {
 
 .main-content-about {
     display: flex;
-    min-height: calc(100vh - 20rem);
-    align-items: center;
-    justify-content: center;
+    min-height: calc(100vh - 40rem);
     gap: 16rem;
 }
 
 .pics-container {
+    width: 100%;
     display: flex;
     flex: 1;
     position: relative;
@@ -134,13 +137,14 @@ body {
 
 .pivot {
     position: relative;
+    width: 100%;
 }
 
 .pic-108mm-88mm {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 6rem;
+    width: 40%;
+    padding: 2%;
     aspect-ratio: 22 / 27;
     box-shadow: 1rem 1rem 2rem #33333341;
     background: var(--color-background-pic);
@@ -148,7 +152,6 @@ body {
 
 .pic-108mm-88mm img {
     flex: 3;
-    min-width: 100%;
     background: #333;
 }
 
@@ -158,23 +161,23 @@ body {
 
 .pics-container .pic-108mm-88mm:nth-child(1) {
     position: absolute;
-    width: 100rem;
-    left: -40rem;
+    left: 50%;
     top: -10rem;
-    transform: translate(-50%, -50%) rotate(-25deg);
+    transform: translate(-80%, -50%) rotate(-25deg);
 }
 
 .pics-container .pic-108mm-88mm:nth-child(2) {
     position: absolute;
-    top: -20rem;
-    width: 100rem;
-    left: 40rem;
+    left: 50%;
     top: 10rem;
-    transform: translate(-50%, -50%) rotate(15deg);
+    transform: translate(0%, -50%) rotate(15deg);
 }
 
 .text-content-about {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .text-content-about h2 {
@@ -217,7 +220,7 @@ body {
 .pic-108mm-88mm-h {
     display: flex;
     flex-direction: column;
-    padding: 6rem;
+    padding: 3%;
     width: 70%;
     aspect-ratio: 27 / 22;
     box-shadow: 1rem 1rem 2rem #33333341;
@@ -226,11 +229,11 @@ body {
 
 .pic-108mm-88mm-h img {
     background: #333;
-    flex: 3;
+    flex: 4;
 }
 
 .pic-108mm-88mm-h p {
-    flex: 1;
+    flex: 1.4;
 }
 
 .text-education {
@@ -244,4 +247,92 @@ body {
 
 .background-variation {
     background: #00000030;
+}
+
+.mail {
+    padding: 4rem;
+    box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
+    background-color: var(--color-background-pic);
+}
+
+.mail input, textarea {
+    background: none;
+}
+
+.mail-subject {
+    display: block;
+    width: 100%;
+    margin-bottom: 4rem;
+    padding: 4rem;
+    font-size: 6rem;
+    border: none;
+    border-bottom: 2px solid #630707;
+}
+
+.from-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.from-label {
+
+}
+
+.from-input {
+    flex: 1;
+    padding: 2rem 1rem;
+    border: 0;
+}
+
+.mail-to {
+    margin-bottom: 4rem;
+}
+
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-label {
+    margin-bottom: 2rem;
+}
+
+.message-textarea {
+    border: none;
+    resize: none;
+    height: 100rem;
+}
+
+.send-mail-btn {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    border: none;
+    border-top: 1px solid #fdabab;
+    border-left: 1px solid #fdabab;
+    box-shadow: 0.5rem 0.5rem 1rem #00000052;
+    background-color: #ee3838;
+    font-weight: 800;
+    color: #630707;
+}
+
+@media(max-width: 1040px) {
+    .main-content-home {
+        flex-direction: column;
+    }
+
+    .main-content-about {
+        flex-direction: column;
+    }
+
+    .text-content-about {
+        flex: none;
+    }
+
+    .pics-container .pic-108mm-88mm {
+        width: 70rem;
+        padding: 4rem;
+    }
 }
