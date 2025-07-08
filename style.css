@@ -69,26 +69,28 @@ body {
 .pic-46mm-62mm {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 5%;
+    align-items: center;
+    width: 90rem;
+    padding: 4rem;
+
     /* para alcançarmos a proporção desse modelo de foto */
     aspect-ratio: 23/31;
     background: var(--color-background-pic);
     box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
 }
 
-.pic-46mm-62mm img {
-    background-color: #333;
-    width: 100%;
+.pic-46mm-62mm .pic-container {
     flex: 3;
+}
+
+.pic-46mm-62mm img {
+    width: 100%;
+    object-fit: contain;
 }
 
 .pic-46mm-62mm p {
     flex: 1;
     width: 100%;
-    display: inline-block;
-    overflow: hidden;
-    text-wrap: nowrap;
     text-overflow: ellipsis;
 }
 
@@ -97,9 +99,6 @@ body {
     font-family: "Caveat Brush", cursive;
     font-weight: 400;
     font-style: normal;
-    position: relative;
-    left: 5%;
-    top: 5%;
     transform: rotate(2deg);
 }
 
@@ -247,7 +246,7 @@ body {
 }
 
 .main-content-education .section-title {
-    margin-top: 10rem;
+    margin-top: 16rem;
 }
 
 .certificate {
@@ -266,6 +265,7 @@ body {
 }
 
 .project-board {
+    margin-top: 16rem;
     padding: 16rem;
     border: 8rem solid #ddd;
     background: #a78258;
@@ -278,6 +278,7 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-flow: row;
     gap: 8rem;
+    margin-bottom: 8rem;
 }
 
 .project-list li {
@@ -288,22 +289,24 @@ body {
     position: absolute;
     top: -8%;
     left: -5%;
-    width: 16rem;
-    height: 16rem;
-    background: radial-gradient(farthest-corner at 5rem 4rem, #d19f34, #534213);
+    width: 12rem;
+    height: 12rem;
+    background: radial-gradient(farthest-corner at 4rem 3rem, #d19f34, #534213);
     border-radius: 50%;
     box-shadow: 2px 2px 1rem #33333380;
+    z-index: 2;
 }
 
 .pin .light {
     position: absolute;
     top: 20%;
     left: 20%;
-    width: 4rem;
-    height: 4rem;
-    filter: blur(1rem);
+    width: 2rem;
+    height: 2rem;
+    filter: blur(0.5rem);
     background: #ffffff;
     border-radius: 50%;
+    z-index: 3;
 }
 
 .project-card {
@@ -330,7 +333,44 @@ body {
 
 .icon-list li img {
     width: 100%;
-    filter:grayscale();
+}
+
+.project-card:hover {
+    cursor: pointer;
+    position: relative;
+    top: -2rem;
+    left: -2rem;
+}
+
+.github-link {
+    position: relative;
+    color: #333;
+    text-decoration: none;
+}
+
+.github-link .tape {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%);
+    width: 60%;
+    height: 10rem;
+    background: #FFFFFF40;
+}
+
+.github-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.github-icon {
+    width: 16rem;
+}
+
+.github-icon img {
+    width: 100%;
 }
 
 .mail-section {
@@ -363,7 +403,7 @@ body {
     padding: 4rem;
     font-size: 6rem;
     border: none;
-    border-bottom: 2px solid #630707;
+    border-bottom: 2px solid #5f380c;
 }
 
 .from-container {
@@ -383,11 +423,8 @@ body {
 .from-input {
     flex: 1;
     padding: 2rem 1rem;
-    border: 0;
-}
-
-.mail-to {
-    margin-bottom: 4rem;
+    border: none;
+    border-bottom: 1px solid #DDD;
 }
 
 .message-container {
@@ -402,7 +439,8 @@ body {
 .message-textarea {
     height: 100rem;
     margin-bottom: 4rem;
-    border: none;
+    border: 1px solid #DDD;
+    padding: 2rem 1rem;
     resize: none;
 }
 
@@ -416,12 +454,12 @@ body {
     border-radius: 8rem;
     box-shadow: 1rem 1rem 1rem #00000030;
     padding: 4rem;
-    color: #630707;
+    color: #5f380c;
     font-weight: 800;
 }
 
 .send-mail-btn:hover {
-    background-color: #630707;
+    background-color: #5f380c;
     color: var(--color-background-pic);
 }
 
@@ -452,14 +490,14 @@ body {
     position: absolute;
     bottom: 10%;
     left: 8%;
-    background: #630707;
+    background: #5f380c;
     width: 40%;
     padding: 6rem;
     font-size: 8rem;
     color: #FFF;
 }
 
-
+/* A responisividade está limitada a dois estágios apenas */
 @media(max-width: 1140px) {
     .header {
         padding: 4rem;
