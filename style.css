@@ -35,6 +35,7 @@ body {
     position: fixed;
     box-shadow: 0 1rem 1rem var(--color-background-shadow);
     background: var(--color-background-main);
+    z-index: 99;
 }
 
 .header ul {
@@ -52,8 +53,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0 16rem;
-    padding: 20rem 0;
+    overflow-x: hidden;
+    padding: 20rem 16rem;
 }
 
 .main-content-home {
@@ -207,10 +208,10 @@ body {
     display: flex;
     gap: 16rem;
     align-items: center;
-    min-height: 200rem;
+    min-height: 160rem;
 }
 
-.main-content-education ul .img-container {
+.main-content-education ul .pic-container {
     flex: 1;
     display: flex;
     align-items: center;
@@ -227,9 +228,13 @@ body {
     background: var(--color-background-pic);
 }
 
-.pic-108mm-88mm-h img {
+.pic-108mm-88mm-h .pic-container {
     background: #333;
     flex: 4;
+}
+
+.pic-108mm-88mm-h img {
+    width: 100%;
 }
 
 .pic-108mm-88mm-h p {
@@ -245,11 +250,91 @@ body {
     margin-top: 10rem;
 }
 
-.background-variation {
-    background: #00000030;
+.certificate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    
+}
+
+.certificate img {
+    width: 80%;
+    padding: 2rem;
+    background: var(--color-background-pic);
+    box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
+}
+
+.project-board {
+    padding: 16rem;
+    border: 8rem solid #ddd;
+    background: #a78258;
+    box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
+}
+
+.project-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+    gap: 8rem;
+}
+
+.project-list li {
+    position: relative;
+}
+
+.pin {
+    position: absolute;
+    top: -8%;
+    left: -5%;
+    width: 16rem;
+    height: 16rem;
+    background: radial-gradient(farthest-corner at 5rem 4rem, #d19f34, #534213);
+    border-radius: 50%;
+    box-shadow: 2px 2px 1rem #33333380;
+}
+
+.pin .light {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 4rem;
+    height: 4rem;
+    filter: blur(1rem);
+    background: #ffffff;
+    border-radius: 50%;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    padding: 12rem 4rem 4rem;
+    background: #ffd270;
+    box-shadow: 1rem 1rem 1rem #33333360;
+}
+
+.icon-list {
+    display: flex;
+    list-style: none;
+}
+
+.icon-list li {
+    width: 16rem;
+    height: 16rem;
+    padding: 2rem;
+    /* border: 1px solid #DEDEDE; */
+    /* border-radius: 50%; */
+    /* background: var(--color-background-pic); */
+}
+
+.icon-list li img {
+    width: 100%;
+    filter:grayscale();
 }
 
 .mail-section {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-top: 8rem;
@@ -261,7 +346,6 @@ body {
 
 .mail {
     padding: 4rem 8rem;
-    align-self: center;
     width: 100%;
     max-width: 70%;
     box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
@@ -283,6 +367,13 @@ body {
 }
 
 .from-container {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    align-items: center;
+}
+
+.email-container {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
@@ -334,13 +425,48 @@ body {
     color: var(--color-background-pic);
 }
 
-@media(max-width: 1040px) {
+.envelop {
+    position: absolute;
+    height: 100%;
+    top: 10%;
+    right: -40rem;
+    transform: translate(50%) rotate(5deg);
+    border: 1px solid #ddd;
+    box-shadow: 1rem 1rem 1rem var(--color-background-shadow);
+}
+
+.stamp {
+    display: flex;
+    position: absolute;
+    width: 10%;
+    top: 20%;
+    left: 10%;
+    aspect-ratio: 1/1;
+}
+
+.envelop img {
+    height: 100%;
+}
+
+.envelop .info {
+    position: absolute;
+    bottom: 10%;
+    left: 8%;
+    background: #630707;
+    width: 40%;
+    padding: 6rem;
+    font-size: 8rem;
+    color: #FFF;
+}
+
+
+@media(max-width: 1140px) {
     .header {
         padding: 4rem;
     }
 
     .content-container {
-        margin: 0 4rem;
+        padding: 20rem 4rem;
     }
 
     .main-content-home {
@@ -349,6 +475,10 @@ body {
 
     .main-content-about {
         flex-direction: column;
+    }
+
+    .main-content-education .pic-108mm-88mm-h {
+        width: 90%;
     }
 
     .text-content-about {
@@ -362,5 +492,9 @@ body {
 
     .mail {
         max-width: 90%;
+    }
+
+    .project-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
