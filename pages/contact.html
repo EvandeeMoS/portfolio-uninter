@@ -7,27 +7,30 @@
         <title>Document</title>
     </head>
     <body>
-        <!-- A responsividade ficou pendente nessa página -->
-        <header class="header">
-            <a class="title">
-                <h1>EvandeeMoS</h1>
-            </a>
-            <nav>
+        <header data-header-el class="header">
+            <div class="header-compact">
+                <a class="title">
+                    <h1>EvandeeMoS</h1>
+                </a>
+                <button onclick="openCompactHeaderNav()" data-compact-nav-btn class="header-nav-button" type="button">
+                    <span>|</span>
+                    <span >|</span>
+                    <span>|</span>
+                </button>
+            </div>
+            <nav class="header-navigation">
                 <ul>
                     <li>
                         <a href="../index.html">Início</a>
                     </li>
                     <li>
-                        <a href="about.html">Sobre mim</a>
+                        <a href="./about.html">Sobre mim</a>
                     </li>
                     <li>
-                        <a href="education.html">Formação</a>
+                        <a href="./projects.html">Projetos</a>
                     </li>
                     <li>
-                        <a href="projects.html">Projetos</a>
-                    </li>
-                    <li>
-                        <a href="contact.html">Contato</a>
+                        <a href="./contact.html">Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -62,7 +65,7 @@
                             <p class="">Destinatário: </p>
                             <p>Evandee Moises da Silva</p>
                         </div>
-                        <img src="../envelop.svg" alt="">
+                        <img src="../svgs/envelop.svg" alt="">
                     </div>
                 </section>
             </section>
