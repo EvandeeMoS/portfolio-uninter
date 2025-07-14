@@ -35,38 +35,29 @@
                 </ul>
             </nav>
         </header>
-        <section class="content-container">
+        <section class="page-body">
             <section class="mail-section">
                 <h2>Mande-me um email</h2>
                 <section class="mail">
                     <form action="POST">
-                        <input class="mail-subject" name="subject" placeholder="Insira o assunto do email aqui..." type="text">
-                        <div class="from-container">
-                            <label class="from-label" for="name-input">Nome: </label>
-                            <input class="from-input" id="name-input" name="email" placeholder="Insira seu nome aqui..." type="text">
+                        <div class="subject-container">
+                            <label for="email-subject">Assunto:</label>
+                            <input id="email-subject" class="mail-subject" name="subject" placeholder="Insira o assunto do email aqui..." type="text">
+                        </div>
+                        <div class="name-container">
+                            <label class="name-label" for="name-input">Nome: </label>
+                            <input class="name-input" id="name-input" name="email" placeholder="Insira seu nome aqui..." type="text">
                         </div>
                         <div class="email-container">
-                            <label class="from-label" for="email-input">Email: </label>
-                            <input class="from-input" id="email-input" name="email" placeholder="Insira seu email aqui..." type="text">
+                            <label class="email-label" for="email-input">Email: </label>
+                            <input class="email-input" id="email-input" name="email" placeholder="Insira seu email aqui..." type="text">
                         </div>
                         <div class="message-container">
                             <label class="message-label" for="message">Mensagem:</label>
-                            <textarea class="message-textarea" id="message" name="message" placeholder="Insira o corpo do seu email aqui" type="text"></textarea>
+                            <textarea class="message-textarea" id="message" name="message" placeholder="Insira o corpo do seu email aqui" type="text" rows="20"></textarea>
                         </div>
                         <button title="enviar" class="send-mail-btn" type="submit">enviar</button>
                     </form>
-                    <div class="envelop">
-                        <div class="stamp">
-                            <img src="../stamp.webp" alt="">
-                        </div>
-                        <div class="info">
-                            <p class="">Remetente: </p>
-                            <p data-mailTo class="from">--</p>
-                            <p class="">Destinatário: </p>
-                            <p>Evandee Moises da Silva</p>
-                        </div>
-                        <img src="../svgs/envelop.svg" alt="">
-                    </div>
                 </section>
             </section>
         </section>
